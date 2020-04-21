@@ -78,9 +78,11 @@ function manejarErrores(errores){
     const $errores = document.querySelector("#errores");
     let cantidadErrores = 0;
 
+    $errores.textContent = "";
+
 
     
-        llaves.forEach(function(llave) {
+        llaves.forEach((llave) => {
         let error = errores[llave];
 
         if (error) {
@@ -95,10 +97,12 @@ function manejarErrores(errores){
             $form[key].className = "";
         }
 
-        return cantidadErrores;
+        
     }
     
-    )
+    );
+
+    return cantidadErrores;
 
     // errorNombre = errores.nombre;
     // errorCiudad = errores.ciudad;
