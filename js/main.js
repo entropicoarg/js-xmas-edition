@@ -72,7 +72,7 @@ function validarFormulario(event){
     
 }
 
-function manejarErrores(errores){
+/*function manejarErrores(errores){
     
     const llaves = Object.keys(errores);
     const $errores = document.querySelector("#errores");
@@ -124,6 +124,32 @@ function manejarErrores(errores){
 
 
 }
+*/
+function manejarErrores(errores) {
+
+    const keys = Object.keys(errores);
+    const $errores = document.querySelector('#errores');
+    let errorsQuantity = 0;
+  
+    $errores.textContent = '';
+  
+    keys.forEach((key) => {
+      const error = errores[key];
+  
+      if (error) {
+        errorsQuantity++;
+        $form[key].className = 'error';
+  
+        const $error = document.createElement('li');
+        $error.textContent = error;
+        $errores.appendChild($error);
+      } else {
+        $form[key].className = '';
+      }
+    });
+  
+    return errorsQuantity;
+  }
 
 const $form = document.formulario;
 $form.onsubmit = validarFormulario;
