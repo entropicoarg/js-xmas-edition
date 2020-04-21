@@ -30,7 +30,7 @@ function validarDescripcionRegalo(regalo){
         return "este campo debe tener menos de 100 caracteres";
     }
 
-    if(!/^[a-z0-9]+$/i.test(regalo)){
+    if(!/^[a-z0-9 ]+$/i.test(regalo)){
         return "la descripcion del regalo solo acepta letras o numeros";
     }
     return "";
