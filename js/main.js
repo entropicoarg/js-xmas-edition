@@ -38,7 +38,7 @@ function validarDescripcionRegalo(regalo){
 }
 
 function validarFormulario(event){
-    event.preventDefault();
+    
     const $form = document.formulario;
     const nombre = $form.nombre.value;
     const ciudad = $form.ciudad.value;
@@ -56,22 +56,23 @@ function validarFormulario(event){
 
     
     manejarErrores(errores);
-    
+    event.preventDefault();
     
     
 }
 
 function manejarErrores(errores){
-    let cantidadErrores = 0;
+    
     const llaves = Object.keys(errores);
     const $errores = document.querySelector("#errores");
+    let cantidadErrores = 0;
     
         llaves.forEach(function(llave) {
         let error = errores[llave];
 
         if (error) {
             cantidadErrores ++;
-            $form[key].className = "error";
+            $form[llave].className = "error";
 
             const $error = document.createElement("li");
             $error.innerText = error;
