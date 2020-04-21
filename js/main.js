@@ -54,6 +54,17 @@ function validarFormulario(event){
         "descripcion-regalo": errorDescripcionRegalo,
     }
 
+    const esExitoso = manejarErrores(errores) === 0;
+
+    if (esExitoso) {
+        $form.className = "oculto";
+        document.querySelector("#exito").className = "";
+
+        setTimeout(function(){
+            window.location.href = `wishlist.html`;
+        }, 5000);
+    };
+
     
     manejarErrores(errores);
     event.preventDefault();
@@ -66,6 +77,8 @@ function manejarErrores(errores){
     const llaves = Object.keys(errores);
     const $errores = document.querySelector("#errores");
     let cantidadErrores = 0;
+
+
     
         llaves.forEach(function(llave) {
         let error = errores[llave];
