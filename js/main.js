@@ -7,7 +7,7 @@ function validarNombre(nombre){
         return "Este campo debe tener menos de 50 caracteres";
     }
 
-    if(!/^[A-z]+$/i.test(nombre)){
+    if(!/^[A-z ]+$/i.test(nombre)){
         return "el nombre solo acepta letras"
     }
 
