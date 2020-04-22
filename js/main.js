@@ -72,59 +72,6 @@ function validarFormulario(event){
     
 }
 
-/*function manejarErrores(errores){
-    
-    const llaves = Object.keys(errores);
-    const $errores = document.querySelector("#errores");
-    let cantidadErrores = 0;
-
-    $errores.textContent = "";
-
-
-    
-        llaves.forEach((llave) => {
-        let error = errores[llave];
-
-        if (error) {
-            cantidadErrores ++;
-            $form[llave].className = "error";
-
-            const $error = document.createElement("li");
-            $error.innerText = error;
-            $errores.appendChild($error);    
-
-        } else {
-            $form[key].className = "";
-        }
-
-        
-    }
-    
-    );
-
-    return cantidadErrores;
-
-    // errorNombre = errores.nombre;
-    // errorCiudad = errores.ciudad;
-    // errorDescripcionRegalo = errores.descripcionRegalo;
-
-    // if (errorNombre) {
-    //     $form.nombre.className = "error";
-    // } else $form.nombre.className = "";
-
-    
-
-    // if (errorCiudad) {
-    //     $form.ciudad.className = "error";
-    // } else $form.ciudad.className = "";
-
-    // if (errorDescripcionRegalo) {
-    //     $form["descripcion-regalo"].className = "error";
-    // } else $form["descripcion-regalo"].className = "";
-
-
-}
-*/
 function manejarErrores(errores) {
 
     const keys = Object.keys(errores);
