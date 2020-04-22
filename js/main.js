@@ -66,7 +66,7 @@ function validarFormulario(event){
     };
 
     
-    manejarErrores(errores);
+    
     event.preventDefault();
     
     
